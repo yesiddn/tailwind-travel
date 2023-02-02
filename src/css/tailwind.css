@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Extracting components */
+.Card {
+  @apply snap-center w-64 h-80 shrink-0 shadow-md rounded-lg overflow-hidden
+}
+
+.Green-shadow {
+  @apply shadow-lime-400
+}
+
+.Blue-shadow {
+  @apply shadow-sky-300
+}
