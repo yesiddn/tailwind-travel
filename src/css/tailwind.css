@@ -14,3 +14,7 @@
 .Blue-shadow {
   @apply shadow-sky-300 hover:shadow-sky-500
 }
+
+.card-title {
+  @apply text-2xl px-8 pt-8 pb-2 font-semibold text-white
+}
