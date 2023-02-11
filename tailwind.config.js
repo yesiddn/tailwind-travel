@@ -30,6 +30,8 @@ module.exports = {
         chicago: "url('../img/chicago.jpg')",
         europe: "url('../img/europe.jpg')",
         iceland: "url('../img/iceland.jpg')",
+        instagram: "url('../svg/instagram.svg')",
+        twitter: "url('../svg/twitter.svg')",
       },
     },
   },
