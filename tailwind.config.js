@@ -4,6 +4,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: ['./public/index.html', './src/**/*.{html,js}'],
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     colors: {
       ...colors,
@@ -32,6 +33,18 @@ module.exports = {
         iceland: "url('../img/iceland.jpg')",
         instagram: "url('../svg/instagram.svg')",
         twitter: "url('../svg/twitter.svg')",
+        map: "url('../svg/map.svg')",
+        home: "url('../svg/home.svg')",
+        search: "url('../svg/search.svg')",
+        heart: "url('../svg/heart.svg')",
+        user: "url('../svg/user.svg')",
+        moon: "url('../svg/moon.svg')",
+      },
+      gridTemplateColumns: {
+        cardCol: '2fr 3fr',
+      },
+      gridTemplateRows: {
+        cardRow: '620px repeat(2, 400px)',
       },
     },
   },

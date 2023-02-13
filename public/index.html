@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,147 +13,172 @@
     <link rel="stylesheet" href="./css/tailwind.css" />
     <title>Tailwind Travel</title>
   </head>
-  <body class="font-Montserrat">
-    <nav></nav>
-    <div id="tab_bar"></div>
+  <body class="font-Montserrat dark:bg-gray-900">
+    <nav class="hidden w-full h-16 bg-white justify-around items-center font-bold text-lg text-primary z-10 lg:fixed lg:flex dark:bg-gray-800 dark:text-white">
+      <a class="flex w-auto h-auto items-center space-x-2" href="#">
+        <span class="inline-block w-16 h-16 bg-map"></span>
+        <p class="text-xl">Tailwind Travel</p>
+      </a>
+
+      <div class="flex space-x-6">
+        <a href="#home">Home</a>
+
+        <a href="#recomendadas">Locations</a>
+
+        <a href="#rentas_destacadas">Stays</a>
+        
+        <a href="#faqs">FAQs</a>
+
+        <a href="#about-us">About Us</a>
+      </div>
+
+      <div class="flex space-x-4">
+        <a class="inline-block w-8 h-8 bg-search" href="#rentas_destacadas"></a>
+        <button class="inline-block w-8 h-8 bg-moon" id="toggle" type="button"></button>
+        <a class="inline-block w-8 h-8 bg-user" href="#"></a>
+      </div>
+    </nav>
+
     <section class="w-full h-auto">
       <div id="home">
-        <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center">
-          <input class="w-3/5 p-4 rounded-full shadow-md outline-none transition-all duration-300 focus-within:shadow-md focus:ring-2 focus:w-4/5" placeholder="San Francisco" type="search" name="" id="">
+        <div class="w-full h-full flex flex-col absolute space-y-80 py-4 items-center lg:justify-center lg:space-y-0 lg:items-start">
+          <div class="flex w-3/5 p-4 bg-white rounded-full shadow-md space-x-4 lg:hidden">
+            <span class="inline-block w-8 h-8 bg-search"></span>
+            <input class="w-full outline-none rounded-full focus-within:shadow-md focus:ring-2" placeholder="San Francisco" type="search" name="" id="">
+          </div>
+          <p class="hidden h-auto text-4xl font-bold ml-16 lg:block lg:w-2/5 lg:pb-6">Find More Locations Like This</p>
 
-          <button class="w-48 text-lg text-primary font-semibold p-3 bg-white shadow-md rounded-full transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110">
-            Explorar More
+          <button class="w-48 text-lg text-primary font-semibold p-3 bg-white shadow-md rounded-full transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16 dark:text-black" type="button">
+            Explore More
           </button>
         </div>
 
-        <div class="w-full h-3/4">
-          <div class="w-full h-full">
-            <img src="./img/sanFrancisco.jpg" alt="">
-          </div>
+        <div class="w-full h-full lg:h-screen lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+          <img class="lg:hidden" src="./img/sanFrancisco.jpg" alt="">
         </div>
       </div>
 
-      <div class="py-10" id="recomendadas">
-        <p class="pl-10 font-semibold text-3xl text-primary">Our recomendation</p>
+      <div class="pt-10" id="recomendadas">
+        <p class="pl-10 font-semibold text-3xl text-primary dark:text-white">Our recomendation</p>
 
-        <div class="flex w-auto p-8 pb-0 gap-5 snap-x overflow-x-auto overscroll-contain scrollbar-hide">
-          <div class="Card Green-shadow">
+        <div class="flex w-auto p-8 pb-0 gap-5 snap-x overflow-x-auto scrollbar-hide">
+          <div class="Card Green-shadow dark:shadow-none">
             <div class="w-full h-3/5 rounded-t-lg bg-norway bg-cover"></div>
-            <div class="w-full h-2/5 p-4 bg-secondary text-white">
+            <div class="w-full h-2/5 p-4 bg-secondary text-white Gray-700">
               <p class="font-bold text-xl">Norway</p>
-              <p class="text-base">Beautiful landscapes</p>
+              <p class="text-base dark:text-gray-300">Beautiful landscapes</p>
             </div>
           </div>
 
-          <div class="Card Blue-shadow">
+          <div class="Card Blue-shadow dark:shadow-none">
             <div class="w-full h-3/5 rounded-t-lg bg-new_york bg-cover"></div>
-            <div class="w-full h-2/5 p-4 bg-white text-tertiary">
+            <div class="w-full h-2/5 p-4 bg-white text-tertiary Gray-800 dark:text-white">
               <p class="font-bold text-xl">New York</p>
-              <p class="text-base">Concrete jungle</p>
+              <p class="text-base dark:text-gray-300">Concrete jungle</p>
             </div>
           </div>
 
-          <div class="Card Green-shadow">
+          <div class="Card Green-shadow dark:shadow-none">
             <div class="w-full h-3/5 rounded-t-lg bg-yosemite bg-cover"></div>
-            <div class="w-full h-2/5 p-4 bg-secondary text-white">
+            <div class="w-full h-2/5 p-4 bg-secondary text-white Gray-700">
               <p class="font-bold text-xl">Yosemite</p>
-              <p class="text-base">A break from de world</p>
+              <p class="text-base dark:text-gray-300">A break from de world</p>
             </div>
           </div>
 
-          <div class="Card Blue-shadow">
+          <div class="Card Blue-shadow dark:shadow-none">
             <div class="w-full h-3/5 rounded-t-lg bg-seattle bg-cover"></div>
-            <div class="w-full h-2/5 p-4 bg-white text-tertiary">
+            <div class="w-full h-2/5 p-4 bg-white text-tertiary Gray-800 dark:text-white">
               <p class="font-bold text-xl">Seattle</p>
-              <p class="text-base">Big City</p>
+              <p class="text-base dark:text-gray-300">Big City</p>
             </div>
           </div>
 
-          <div class="Card Green-shadow">
+          <div class="Card Green-shadow dark:shadow-none">
             <div class="w-full h-3/5 rounded-t-lg bg-switzerland bg-cover"></div>
-            <div class="w-full h-2/5 p-4 bg-secondary text-white">
+            <div class="w-full h-2/5 p-4 bg-secondary text-white Gray-700">
               <p class="font-bold text-xl">Switzerland</p>
-              <p class="text-base">Big City</p>
+              <p class="text-base dark:text-gray-300">Big City</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="w-full pb-10" id="rentas_destacadas">
-        <p class="pl-10 text-3xl text-primary font-semibold">Trending stays</p>
-        <div class="w-full h-full px-8 pt-8 flex flex-col space-y-6 items-center justify-center">
-          <div class="w-full h-96 bg-chicago bg-cover rounded-xl">
-            <p class="card-title">Chicago</p>
-            <p class="text-base mr-24 pl-8 text-black">2 rooms, bathroom and kitchen.</p>
+      <div class="w-full pt-10" id="rentas_destacadas">
+        <p class="pl-10 text-3xl text-primary font-semibold dark:text-white">Trending stays</p>
+        <div class="w-full h-full px-8 pt-8 flex flex-col space-y-6 items-center justify-center text-white lg:grid lg:grid-cols-cardCol lg:grid-rows-cardRow lg:gap-6 lg:space-y-0">
+          <div class="w-full h-96 bg-chicago bg-cover bg-center rounded-xl lg:h-full lg:col-span-2 lg:pt-8 lg:pr-8 lg:text-right">
+            <p class="card-title ">Chicago</p>
+            <p class="text-base mr-24 pl-8 text-black lg:mr-8 lg:text-xl">2 rooms, bathroom and kitchen.</p>
           </div>
           
-          <div class="w-full h-96 bg-LA bg-cover rounded-xl">
+          <div class="w-full h-96 bg-LA bg-cover bg-center rounded-xl lg:relative lg:h-full lg:row-span-2 lg:pt-8 lg:text-right">
             <p class="card-title">Los Angeles</p>
-            <p class="text-base mr-24 pl-8 text-white">4 rooms, 3 bathrooms, kitchen and private pool.</p>
+            <p class="text-base mr-24 pl-8 lg:absolute lg:w-2/3 lg:right-0 lg:mr-8 lg:text-xl">4 rooms, 3 bathrooms, kitchen and private pool.</p>
           </div>
 
-          <div class="w-full h-96 bg-miami bg-cover rounded-xl">
-            <p class="card-title">Miami</p>
-            <p class="text-base mr-24 pl-8 text-black">3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
+          <div class="w-full h-96 bg-miami bg-cover bg-center rounded-xl lg:relative lg:h-full lg:pt-8 lg:text-right lg:bg-center">
+            <p class="card-title lg:pt-1 lg:pr-16">Miami</p>
+            <p class="text-base mr-24 pl-8black lg:absolute lg:w-7/12 lg:right-0 lg:mr-16 lg:text-lg">3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
           </div>
 
-          <div class="w-full h-96 bg-bali bg-cover rounded-xl">
-            <p class="card-title">Bali</p>
-            <p class="text-base mr-24 pl-8 text-white">2 rooms, 2 bathrooms,  kitchen and private pool.</p>
+          <div class="w-full h-96 bg-bali bg-cover bg-center rounded-xl lg:relative lg:h-full lg:pt-8 lg:text-right lg:bg-center">
+            <p class="card-title lg:pt-1 lg:pr-16">Bali</p>
+            <p class="text-base mr-24 pl-8 lg:absolute lg:w-7/12 lg:right-0 lg:mr-16 lg:text-lg">2 rooms, 2 bathrooms,  kitchen and private pool.</p>
           </div>
         </div>
       </div>
 
-      <div class="w-full h-full pb-10" id="faqs">
-        <p class="pl-10 text-3xl text-primary font-semibold">FAQs</p>
+      <div class="w-full h-full py-10" id="faqs">
+        <p class="pl-10 text-3xl text-primary font-semibold dark:text-white">FAQs</p>
         
         <div class="flex flex-col px-8 pt-8 space-y-4">
           <div>
-            <p class="text-xl text-primary font-medium">
+            <p class="text-xl text-primary font-medium dark:text-white">
               Política de Cancelación
             </p>
   
-            <p class="text-base pt-2">
+            <p class="pt-2 text-base text-black dark:text-gray-300">
               Para estancias menores a una semana es importante avisar con 3 días de anticipación, de caso contario será sancionado.
             </p>
           </div>
           
           <div>
-            <p class="text-xl text-primary font-medium">
+            <p class="text-xl text-primary font-medium dark:text-white">
               Métodos de pago
             </p>
   
-            <p class="text-base pt-2">
+            <p class="pt-2 text-base text-black dark:text-gray-300">
               Aceptamos distintos métodos de pago: VISA, MasterCard, American Express,Paypal y Binance
             </p>
           </div>
   
           <div>
-            <p class="text-xl text-primary font-medium">
+            <p class="text-xl text-primary font-medium dark:text-white">
               Mascotas
             </p>
   
-            <p class="text-base pt-2">
+            <p class="pt-2 text-base text-black dark:text-gray-300">
               El tema de las mascotas dependerá directamente del anfitrión.
             </p>
           </div>
   
           <div>
-            <p class="text-xl text-primary font-medium">
+            <p class="text-xl text-primary font-medium dark:text-white">
               Información de Seguridad
             </p>
   
-            <p class="text-base pt-2">
+            <p class="pt-2 text-base text-black dark:text-gray-300">
               Todas nuestras estancias cuentan con seguro en caso de accidentes
             </p>
           </div>
   
           <div>
-            <p class="text-xl text-primary font-medium">
+            <p class="text-xl text-primary font-medium dark:text-white">
               Estancias Largas
             </p>
   
-            <p class="text-base pt-2">
+            <p class="pt-2 text-base text-black dark:text-gray-300">
               Contamos con estancias de hasta 3 meses, en este caso es requerido un anticipo con un monto del 50% del valor de la renta
             </p>
           </div>
@@ -161,8 +186,8 @@
       </div>
     </section>
 
-    <footer class="w-full h-full py-10 pl-8 bg-gray-50 text-gray-400">
-      <p class="mb-4 text-2xl font-semibold">About us</p>
+    <footer class="w-full h-full mb-16 py-10 pl-8 bg-gray-50 text-gray-400" id="about-us">
+      <p class="mb-4 text-2xl font-semibold">About Us</p>
       <div class="space-y-2">
         <p class="text-base">Investors</p>
         <p class="text-base">Jobs</p>
@@ -174,5 +199,31 @@
         <a class="inline-block w-6 h-6 bg-twitter" href=""></a>
       </div>
     </footer>
+
+    <div class="fixed flex w-full h-16 justify-evenly items-center bottom-0 bg-white shadow-md lg:hidden dark:bg-gray-800" id="tab_bar">
+      <a class="inline-block w-8 h-8 bg-home" href="#home"></a>
+
+      <a class="inline-block w-8 h-8 bg-heart" href="#recomendadas"></a>
+
+      <a class="inline-block w-8 h-8 bg-search" href="#rentas_destacadas"></a>
+      
+      <a class="inline-block w-8 h-8 bg-user" href="#"></a>
+      
+      <button class="inline-block w-8 h-8 bg-moon" id="toggle-sm" type="button"></button>
+    </div>
+
+    <script>
+      const htmlElement = document.querySelector('html');
+      const toggleButton = document.querySelector('#toggle');
+      const toggleButtonSm = document.querySelector('#toggle-sm');
+
+      toggleButton.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+      });
+
+      toggleButtonSm.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+      });
+    </script>
   </body>
 </html>

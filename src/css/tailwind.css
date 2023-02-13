@@ -8,13 +8,21 @@
 }
 
 .Green-shadow {
-  @apply shadow-lime-300 hover:shadow-lime-500
+  @apply shadow-lime-300 hover:shadow-lime-500 dark:hover:shadow-gray-600
 }
 
 .Blue-shadow {
-  @apply shadow-sky-300 hover:shadow-sky-500
+  @apply shadow-sky-300 hover:shadow-sky-500 dark:hover:shadow-gray-700
 }
 
 .card-title {
   @apply text-2xl px-8 pt-8 pb-2 font-semibold text-white
+}
+
+.Gray-700 {
+  @apply dark:bg-gray-700
+}
+
+.Gray-800 {
+  @apply dark:bg-gray-800
 }
